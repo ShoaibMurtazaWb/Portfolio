@@ -1,283 +1,390 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Shoaib Murtaza — Frontend Engineer &amp; Data Analyst</title>
-<meta name="description" content="Shoaib Murtaza builds responsive React/Next.js interfaces and reads the data behind them. Frontend development, dashboards, and full-stack web apps." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Shoaib Murtaza — Frontend Engineer &amp; Data Analyst</title>
+    <meta
+      name="description"
+      content="Shoaib Murtaza builds responsive React/Next.js interfaces and reads the data behind them. Frontend development, dashboards, and full-stack web apps."
+    />
+    <link rel="icon" href="/logo.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="blueprint-grid" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
 
-<div class="blueprint-grid" aria-hidden="true"></div>
-<div class="grain" aria-hidden="true"></div>
+    <div class="loader" id="loader" aria-hidden="true">
+      <div class="loader-row">
+        <span>SM // PORTFOLIO</span>
+        <span class="loader-pct" id="loaderPct">0%</span>
+      </div>
+      <div class="loader-track">
+        <div class="loader-fill" id="loaderFill"></div>
+      </div>
+    </div>
 
-<div class="loader" id="loader" aria-hidden="true">
-  <div class="loader-row">
-    <span>SM // PORTFOLIO</span>
-    <span class="loader-pct" id="loaderPct">0%</span>
-  </div>
-  <div class="loader-track"><div class="loader-fill" id="loaderFill"></div></div>
-</div>
+    <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
 
-<div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+    <header class="site-header" id="siteHeader">
+      <div class="container header-row">
+        <a href="#top" class="brand">
+          <span class="brand-mark">SM</span>
+          <span class="brand-text">Shoaib&nbsp;Murtaza</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="#work" data-nav>Work</a>
+          <a href="#about" data-nav>About</a>
+          <a href="#process" data-nav>Process</a>
+          <a href="#contact" data-nav>Contact</a>
+        </nav>
+        <a href="#contact" class="btn btn-signal btn-sm header-cta"
+          >Start a project</a
+        >
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-expanded="false"
+          aria-controls="mobileNav"
+          aria-label="Open menu"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
+      <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+        <a href="#work" data-nav>Work</a>
+        <a href="#about" data-nav>About</a>
+        <a href="#process" data-nav>Process</a>
+        <a href="#contact" data-nav>Contact</a>
+      </nav>
+    </header>
 
-<header class="site-header" id="siteHeader">
-  <div class="container header-row">
-    <a href="#top" class="brand">
-      <span class="brand-mark">SM</span>
-      <span class="brand-text">Shoaib&nbsp;Murtaza</span>
-    </a>
-    <nav class="nav" aria-label="Primary">
-      <a href="#work" data-nav>Work</a>
-      <a href="#about" data-nav>About</a>
-      <a href="#process" data-nav>Process</a>
-      <a href="#contact" data-nav>Contact</a>
-    </nav>
-    <a href="#contact" class="btn btn-signal btn-sm header-cta">Start a project</a>
-    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
-      <span></span><span></span>
-    </button>
-  </div>
-  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
-    <a href="#work" data-nav>Work</a>
-    <a href="#about" data-nav>About</a>
-    <a href="#process" data-nav>Process</a>
-    <a href="#contact" data-nav>Contact</a>
-  </nav>
-</header>
-
-<main id="top">
-
-  <!-- ============ HERO ============ -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="eyebrow-dot"></span>Frontend Engineer&nbsp;/&nbsp;Data Analyst — Lahore, PK</p>
-        <h1 class="hero-title">
-          I build the interface.<br>
-          <span class="accent">I read the data</span><br>
-          behind it.
-        </h1>
-        <p class="hero-lede">
-          React &amp; Next.js applications for clients who need more than a static
-          page — dashboards, job trackers, storefronts — built with the same
-          eye for structure I use as a statistics &amp; data‑science student.
-        </p>
-        <div class="hero-actions">
-          <a href="#work" class="btn btn-signal">View the work</a>
-          <a href="https://www.fiverr.com/s/VYQ935m" target="_blank" rel="noopener" class="btn btn-ghost">Hire me on Fiverr ↗</a>
+    <main id="top">
+      <!-- ============ HERO ============ -->
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">
+              <span class="eyebrow-dot"></span>Frontend
+              Engineer&nbsp;/&nbsp;Data Analyst — Lahore, PK
+            </p>
+            <h1 class="hero-title">
+              I build the interface.<br />
+              <span class="accent">I read the data</span><br />
+              behind it.
+            </h1>
+            <p class="hero-lede">
+              React &amp; Next.js applications for clients who need more than a
+              static page — dashboards, job trackers, storefronts — built with
+              the same eye for structure I use as a statistics &amp;
+              data‑science student.
+            </p>
+            <div class="hero-actions">
+              <a href="#work" class="btn btn-signal">View the work</a>
+              <a
+                href="https://www.fiverr.com/s/VYQ935m"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-ghost"
+                >Hire me on Fiverr ↗</a
+              >
+            </div>
+            <dl class="hero-stats">
+              <div>
+                <dt>3</dt>
+                <dd>Shipped products</dd>
+              </div>
+              <div>
+                <dt>React /<br />Next.js</dt>
+                <dd>Primary stack</dd>
+              </div>
+              <div>
+                <dt>BS</dt>
+                <dd>Statistics &amp; Data Science</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="hero-scene-wrap">
+            <canvas id="heroScene" aria-hidden="true"></canvas>
+            <div class="hero-scene-label">
+              <span>DATA</span>
+              <span class="hero-scene-arrow">→</span>
+              <span>INTERFACE</span>
+            </div>
+          </div>
         </div>
-        <dl class="hero-stats">
-          <div><dt>3</dt><dd>Shipped products</dd></div>
-          <div><dt>React /<br>Next.js</dt><dd>Primary stack</dd></div>
-          <div><dt>BS</dt><dd>Statistics &amp; Data Science</dd></div>
-        </dl>
-      </div>
-      <div class="hero-scene-wrap">
-        <canvas id="heroScene" aria-hidden="true"></canvas>
-        <div class="hero-scene-label">
-          <span>DATA</span>
-          <span class="hero-scene-arrow">→</span>
-          <span>INTERFACE</span>
+        <div class="marquee" aria-hidden="true">
+          <div class="marquee-track">
+            <span>React</span><span>Next.js</span><span>TypeScript</span
+            ><span>Tailwind</span><span>MongoDB</span><span>SQL</span
+            ><span>Power BI</span><span>GSAP</span> <span>React</span
+            ><span>Next.js</span><span>TypeScript</span><span>Tailwind</span
+            ><span>MongoDB</span><span>SQL</span><span>Power BI</span
+            ><span>GSAP</span>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <span>React</span><span>Next.js</span><span>TypeScript</span><span>Tailwind</span><span>MongoDB</span><span>SQL</span><span>Power BI</span><span>GSAP</span>
-        <span>React</span><span>Next.js</span><span>TypeScript</span><span>Tailwind</span><span>MongoDB</span><span>SQL</span><span>Power BI</span><span>GSAP</span>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <!-- ============ ABOUT ============ -->
-  <section class="section about" id="about">
-    <div class="container about-grid">
-      <div class="sheet-label reveal">
-        <span class="sheet-index">SHEET 01</span>
-        <span class="sheet-name">Profile</span>
-      </div>
-      <div class="about-main">
-        <h2 class="h2 reveal">Two ways of looking at the same problem.</h2>
-        <p class="about-text reveal">
-          I'm a frontend developer who builds with React and Next.js — component‑based
-          UI, API integration, responsive layouts, the usual craft of shipping a real
-          product. But I came to it through statistics and data science, which means I
-          rarely design a screen without thinking about the structure underneath it:
-          what state it holds, what a user actually needs to see first, how a dashboard
-          should read at a glance.
-        </p>
-        <p class="about-text reveal">
-          Day to day that looks like Power BI dashboards and DAX measures on one side,
-          and React components, Tailwind layouts, and MongoDB‑backed apps on the other.
-          Same instinct, two outputs.
-        </p>
-        <div class="about-tags reveal">
-          <span>React</span><span>Next.js</span><span>TypeScript</span><span>Tailwind CSS</span>
-          <span>MongoDB</span><span>SQL</span><span>Power BI</span><span>Python (Pandas)</span>
+      <!-- ============ ABOUT ============ -->
+      <section class="section about" id="about">
+        <div class="container about-grid">
+          <div class="sheet-label reveal">
+            <span class="sheet-index">SHEET 01</span>
+            <span class="sheet-name">Profile</span>
+          </div>
+          <div class="about-main">
+            <h2 class="h2 reveal">Two ways of looking at the same problem.</h2>
+            <p class="about-text reveal">
+              I'm a frontend developer who builds with React and Next.js —
+              component‑based UI, API integration, responsive layouts, the usual
+              craft of shipping a real product. But I came to it through
+              statistics and data science, which means I rarely design a screen
+              without thinking about the structure underneath it: what state it
+              holds, what a user actually needs to see first, how a dashboard
+              should read at a glance.
+            </p>
+            <p class="about-text reveal">
+              Day to day that looks like Power BI dashboards and DAX measures on
+              one side, and React components, Tailwind layouts, and
+              MongoDB‑backed apps on the other. Same instinct, two outputs.
+            </p>
+            <div class="about-tags reveal">
+              <span>React</span><span>Next.js</span><span>TypeScript</span
+              ><span>Tailwind CSS</span> <span>MongoDB</span><span>SQL</span
+              ><span>Power BI</span><span>Python (Pandas)</span>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <!-- ============ WORK / PROJECTS RAIL ============ -->
-  <section class="section work" id="work">
-    <div class="container work-head">
-      <div class="sheet-label reveal">
-        <span class="sheet-index">SHEET 02</span>
-        <span class="sheet-name">Selected Work</span>
-      </div>
-      <h2 class="h2 reveal">Three products, shipped end to end.</h2>
-      <p class="work-hint reveal">Scroll — this set moves sideways.</p>
-    </div>
-
-    <div class="rail-stage" id="railStage">
-      <div class="rail-track" id="railTrack">
-
-        <article class="plate">
-          <div class="plate-frame">
-            <img src="/images/jobtracker-cover.jpg" alt="Job Tracker dashboard — board view with Wish List column and an Add Job Application modal open" loading="lazy" />
+      <!-- ============ WORK / PROJECTS RAIL ============ -->
+      <section class="section work" id="work">
+        <div class="container work-head">
+          <div class="sheet-label reveal">
+            <span class="sheet-index">SHEET 02</span>
+            <span class="sheet-name">Selected Work</span>
           </div>
-          <div class="plate-info">
-            <span class="plate-index">01 / 03</span>
-            <h3>Job Tracker</h3>
-            <p>A full‑stack job‑application board — Wishlist → Applied → Interviewing → Offer → Rejected — with auth, a details modal, and per‑column actions.</p>
-            <div class="plate-tags"><span>Next.js</span><span>TypeScript</span><span>MongoDB</span><span>Tailwind CSS</span></div>
-          </div>
-        </article>
-
-        <article class="plate">
-          <div class="plate-frame">
-            <img src="/images/shopco-cover.jpg" alt="Shop.co fashion e-commerce landing page with hero banner, new arrivals and top selling sections" loading="lazy" />
-          </div>
-          <div class="plate-info">
-            <span class="plate-index">02 / 03</span>
-            <h3>Shop.co</h3>
-            <p>A premium fashion storefront landing page — new arrivals, top‑selling rails, style browsing, and a customer‑proof section, built for conversion.</p>
-            <div class="plate-tags"><span>React</span><span>UI/UX</span><span>Responsive</span></div>
-          </div>
-        </article>
-
-        <article class="plate">
-          <div class="plate-frame">
-            <img src="/images/bellhopt-cover.jpg" alt="BellHopt grocery and food delivery web app showing product catalog, checkout, and mobile product detail screen" loading="lazy" />
-          </div>
-          <div class="plate-info">
-            <span class="plate-index">03 / 03</span>
-            <h3>BellHopt</h3>
-            <p>A grocery &amp; food‑delivery platform with a full catalog, cart, multi‑step checkout, and live product data pulled from a REST API.</p>
-            <div class="plate-tags"><span>React</span><span>Bootstrap</span><span>API Integration</span></div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PROCESS ============ -->
-  <section class="section process" id="process">
-    <div class="container">
-      <div class="sheet-label reveal">
-        <span class="sheet-index">SHEET 03</span>
-        <span class="sheet-name">Process</span>
-      </div>
-      <h2 class="h2 reveal">From brief to a deployed build.</h2>
-      <ol class="process-list">
-        <li class="process-step reveal">
-          <span class="step-no">01</span>
-          <div>
-            <h3>Scope the screens</h3>
-            <p>Pages, user flows, data needs, and the line between "must ship" and "nice to have."</p>
-          </div>
-        </li>
-        <li class="process-step reveal">
-          <span class="step-no">02</span>
-          <div>
-            <h3>Structure the system</h3>
-            <p>Components, state, API routes and database shape — decided before any pixel‑pushing.</p>
-          </div>
-        </li>
-        <li class="process-step reveal">
-          <span class="step-no">03</span>
-          <div>
-            <h3>Build the interface</h3>
-            <p>React/Next.js front end, Tailwind layout, real data wired in — not placeholder boxes.</p>
-          </div>
-        </li>
-        <li class="process-step reveal">
-          <span class="step-no">04</span>
-          <div>
-            <h3>Test &amp; ship</h3>
-            <p>Responsive QA across breakpoints, performance pass, then deploy and hand off.</p>
-          </div>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- ============ FIVERR CTA ============ -->
-  <section class="section fiverr">
-    <div class="container fiverr-card reveal">
-      <div class="fiverr-copy">
-        <span class="sheet-index">AVAILABLE NOW</span>
-        <h2>Need a React/Next.js build, on a deadline?</h2>
-        <p>I take on responsive web apps, landing pages, and dashboards through Fiverr — same process, same standard as the work above.</p>
-      </div>
-      <div class="fiverr-actions">
-        <a href="https://www.fiverr.com/s/VYQ935m" target="_blank" rel="noopener" class="btn btn-signal">Open Fiverr gig ↗</a>
-        <a href="#contact" class="btn btn-ghost">Contact directly</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ CONTACT ============ -->
-  <section class="section contact" id="contact">
-    <div class="container contact-grid">
-      <div class="reveal">
-        <div class="sheet-label">
-          <span class="sheet-index">SHEET 04</span>
-          <span class="sheet-name">Contact</span>
+          <h2 class="h2 reveal">Three products, shipped end to end.</h2>
+          <p class="work-hint reveal">Scroll — this set moves sideways.</p>
         </div>
-        <h2 class="h2">Tell me what you're building.</h2>
-        <p class="contact-lede">Send the brief, the link, or just the rough idea — I'll reply with how I'd approach it.</p>
-        <ul class="contact-list">
-          <li><span>Email</span><a href="mailto:shoaibmurtazawb@gmail.com">shoaibmurtazawb@gmail.com</a> <button class="copy-btn" id="copyEmail" type="button">Copy</button></li>
-          <li><span>Phone</span><a href="tel:+923019735337">+92 301 9735337</a></li>
-          <li><span>Location</span><span>Lahore, Pakistan</span></li>
-        </ul>
+
+        <div class="rail-stage" id="railStage">
+          <div class="rail-track" id="railTrack">
+            <article class="plate">
+              <div class="plate-frame">
+                <img
+                  src="/images/jobtracker-cover.jpg"
+                  alt="Job Tracker dashboard — board view with Wish List column and an Add Job Application modal open"
+                  loading="lazy"
+                />
+              </div>
+              <div class="plate-info">
+                <span class="plate-index">01 / 03</span>
+                <h3>Job Tracker</h3>
+                <p>
+                  A full‑stack job‑application board — Wishlist → Applied →
+                  Interviewing → Offer → Rejected — with auth, a details modal,
+                  and per‑column actions.
+                </p>
+                <div class="plate-tags">
+                  <span>Next.js</span><span>TypeScript</span><span>MongoDB</span
+                  ><span>Tailwind CSS</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="plate">
+              <div class="plate-frame">
+                <img
+                  src="/images/shopco-cover.jpg"
+                  alt="Shop.co fashion e-commerce landing page with hero banner, new arrivals and top selling sections"
+                  loading="lazy"
+                />
+              </div>
+              <div class="plate-info">
+                <span class="plate-index">02 / 03</span>
+                <h3>Shop.co</h3>
+                <p>
+                  A premium fashion storefront landing page — new arrivals,
+                  top‑selling rails, style browsing, and a customer‑proof
+                  section, built for conversion.
+                </p>
+                <div class="plate-tags">
+                  <span>React</span><span>UI/UX</span><span>Responsive</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="plate">
+              <div class="plate-frame">
+                <img
+                  src="/images/bellhopt-cover.jpg"
+                  alt="BellHopt grocery and food delivery web app showing product catalog, checkout, and mobile product detail screen"
+                  loading="lazy"
+                />
+              </div>
+              <div class="plate-info">
+                <span class="plate-index">03 / 03</span>
+                <h3>BellHopt</h3>
+                <p>
+                  A grocery &amp; food‑delivery platform with a full catalog,
+                  cart, multi‑step checkout, and live product data pulled from a
+                  REST API.
+                </p>
+                <div class="plate-tags">
+                  <span>React</span><span>Bootstrap</span
+                  ><span>API Integration</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PROCESS ============ -->
+      <section class="section process" id="process">
+        <div class="container">
+          <div class="sheet-label reveal">
+            <span class="sheet-index">SHEET 03</span>
+            <span class="sheet-name">Process</span>
+          </div>
+          <h2 class="h2 reveal">From brief to a deployed build.</h2>
+          <ol class="process-list">
+            <li class="process-step reveal">
+              <span class="step-no">01</span>
+              <div>
+                <h3>Scope the screens</h3>
+                <p>
+                  Pages, user flows, data needs, and the line between "must
+                  ship" and "nice to have."
+                </p>
+              </div>
+            </li>
+            <li class="process-step reveal">
+              <span class="step-no">02</span>
+              <div>
+                <h3>Structure the system</h3>
+                <p>
+                  Components, state, API routes and database shape — decided
+                  before any pixel‑pushing.
+                </p>
+              </div>
+            </li>
+            <li class="process-step reveal">
+              <span class="step-no">03</span>
+              <div>
+                <h3>Build the interface</h3>
+                <p>
+                  React/Next.js front end, Tailwind layout, real data wired in —
+                  not placeholder boxes.
+                </p>
+              </div>
+            </li>
+            <li class="process-step reveal">
+              <span class="step-no">04</span>
+              <div>
+                <h3>Test &amp; ship</h3>
+                <p>
+                  Responsive QA across breakpoints, performance pass, then
+                  deploy and hand off.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============ FIVERR CTA ============ -->
+      <section class="section fiverr">
+        <div class="container fiverr-card reveal">
+          <div class="fiverr-copy">
+            <span class="sheet-index">AVAILABLE NOW</span>
+            <h2>Need a React/Next.js build, on a deadline?</h2>
+            <p>
+              I take on responsive web apps, landing pages, and dashboards
+              through Fiverr — same process, same standard as the work above.
+            </p>
+          </div>
+          <div class="fiverr-actions">
+            <a
+              href="https://www.fiverr.com/s/VYQ935m"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-signal"
+              >Open Fiverr gig ↗</a
+            >
+            <a href="#contact" class="btn btn-ghost">Contact directly</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section class="section contact" id="contact">
+        <div class="container contact-grid">
+          <div class="reveal">
+            <div class="sheet-label">
+              <span class="sheet-index">SHEET 04</span>
+              <span class="sheet-name">Contact</span>
+            </div>
+            <h2 class="h2">Tell me what you're building.</h2>
+            <p class="contact-lede">
+              Send the brief, the link, or just the rough idea — I'll reply with
+              how I'd approach it.
+            </p>
+            <ul class="contact-list">
+              <li>
+                <span>Email</span
+                ><a href="mailto:shoaibmurtazawb@gmail.com"
+                  >shoaibmurtazawb@gmail.com</a
+                >
+                <button class="copy-btn" id="copyEmail" type="button">
+                  Copy
+                </button>
+              </li>
+              <li>
+                <span>Phone</span
+                ><a href="tel:+923019735337">+92 301 9735337</a>
+              </li>
+              <li><span>Location</span><span>Lahore, Pakistan</span></li>
+            </ul>
+          </div>
+          <form class="contact-form reveal" id="contactForm">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" required autocomplete="name" />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" required autocomplete="email" />
+            </label>
+            <label>
+              <span>Project brief</span>
+              <textarea name="brief" rows="4" required></textarea>
+            </label>
+            <button type="submit" class="btn btn-signal">Send message</button>
+            <p class="form-note" id="formNote" role="status"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <span>© 2026 Shoaib Murtaza</span>
+        <span>Built with Vite · TypeScript · GSAP · Three.js</span>
+        <a href="#top">Back to top ↑</a>
       </div>
-      <form class="contact-form reveal" id="contactForm">
-        <label>
-          <span>Name</span>
-          <input type="text" name="name" required autocomplete="name" />
-        </label>
-        <label>
-          <span>Email</span>
-          <input type="email" name="email" required autocomplete="email" />
-        </label>
-        <label>
-          <span>Project brief</span>
-          <textarea name="brief" rows="4" required></textarea>
-        </label>
-        <button type="submit" class="btn btn-signal">Send message</button>
-        <p class="form-note" id="formNote" role="status"></p>
-      </form>
-    </div>
-  </section>
+    </footer>
 
-</main>
-
-<footer class="site-footer">
-  <div class="container footer-row">
-    <span>© 2026 Shoaib Murtaza</span>
-    <span>Built with Vite · TypeScript · GSAP · Three.js</span>
-    <a href="#top">Back to top ↑</a>
-  </div>
-</footer>
-
-<script type="module" src="/src/main.ts"></script>
-</body>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>
